@@ -1,0 +1,74 @@
+A11 x1 + A12 x2 + A13 x3 + ... ~ b1
+A21 x1 + A22 x2 + A23 x3 + ... ~ b2
+...
+...
+...
+
+
+[A11 A12 A13 ...
+ A21 A22 A23 ...     [x] = [b]
+ ...		]
+Ax ~ b
+
+A^T * A x = A^T * b
+x = (A^T * A) ^-1 * A^T * b --> Mô hình hồi quy tuyến tính
+
+Nếu số dòng  > số ẩn xi
+phương trình có nghiệm ko?
+Không tìm được các xi thỏa điều kiện nhưng tìm được các xi thỏa điều kiện 
+
+Mô hình hồi quy tuyến tính dùng để làm gì?
+1200 chai rượu vang -> đem đi đo -> 11 tính chất
+		    -> đem cho người nếm thử -> số điểm của chai rượu từ 1 - 10
+11 tính chất <-> điểm số được cho
+
+11 trọng số x1 x2 .. x11 * 11 tính chất ~ điểm được cho
+--> Hệ phương trình
+11 ẩn 1200 dòng?
+A x ~ b
+
+--> có chắc các x tìm được  hiệu quả hay ko? ko chắc chắn
+PP Validation
+chia dữ liệu thành n phần: x phần để xây dựng mô hình, y phần để kiểm thử mô hình (x + y = n)
+VD: 1200 900 xây dựng mô hình 300 kiểm thử mô hình
+--> Hệ pt
+11 ẩn 900 dòng --> [x1 .. x11]
+Thế vào 300 dòng còn lại --> độ lệch so với điểm gốc (1 - 10) là bn? --> mô hình hq hay ko
+Lưu ý: Thế vào 1 dòng -> độ lệch của dòng đó --> tính trung bình độ lệch của toàn bộ 300 dòng
+
+--> Chia như thế nào? mỗi mẫu cần được xây dựng mô hình ít nhất 1 lần và test ít nhất 1 lần
+PP Cross Validation ( 3 4 5 6 7 8 9 10 1000 100000)
+1200 - 4: A B C D
+XD A B C (xD)KT D --> ssD
+XD A B D (xC)KT C --> ssC
+XD A C D (xB)KT B --> ssB
+XD B C D (xA)KT A --> ssA
+TBC(ssA + ssB + ssC +ssD) --> ss trung bình của pp
+
+Câu b: Trong 11 tính chất, tính chất nào cho kq tốt nhất? --> ss nhỏ nhất
+Xây dựng mô hình hqtt cho từng tính chất (x) 
+--> sai số trung bình của tính chất thứ i --> 11 sai số trung bình
+--> so sánh 11 sai số --> tính chất nào hiệu quả nhất
+
+Câu c: Xây dựng mô hình của riêng các bạn bằng cách rút gọn một số tính chất trong 11 tính chất hoặc xây
+dựng thêm các tính chất mới từ 11 tính chất được cung cấp.
+Tính cross validation của mô hình của các bạn
+Tính cross validation cảu mô hình ở câu A
+so sánh 2 sai số của 2 mô hình
+Mô hình có sai số không quá nhiều hơn so với mô hình ở câu A
+
+.py hoặc .ipynb
+
+Báo cáo:
+a. x1 .. x11 
+b. ss trung bình của từng tính chất --> tính chất tốt nhất là?
+kẻ bảng T/c1: ssA ssB ssC ssD sstb xếp hạng
+c. dùng những tính chất nào? tại sao lại dùng các tính chất đó
+Tính cross validation (pp của các bạn) vs cross validation(pp ở câu a)
+Được quyền dùng thư viện, nhưng dùng thư viện phải ghi chú và giải thích vào report về thư viện / ghi chú về hàm
+của thư viện đã dùng
+
+
+
+
+
