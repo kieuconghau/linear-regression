@@ -53,7 +53,7 @@ Xây dựng mô hình hqtt cho từng tính chất (x)
 Câu c: Xây dựng mô hình của riêng các bạn bằng cách rút gọn một số tính chất trong 11 tính chất hoặc xây
 dựng thêm các tính chất mới từ 11 tính chất được cung cấp.
 Tính cross validation của mô hình của các bạn
-Tính cross validation cảu mô hình ở câu A
+Tính cross validation của mô hình ở câu A
 so sánh 2 sai số của 2 mô hình
 Mô hình có sai số không quá nhiều hơn so với mô hình ở câu A
 
